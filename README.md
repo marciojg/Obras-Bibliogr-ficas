@@ -24,3 +24,20 @@ As seguintes regras devem ser seguidas nesta formatação:
 Realize um fork deste repositório, desenvolva sua solução e encaminhe o seu repositório com o seu código. Arquivos compactados não serão aceitos.
 
 Altere o arquivo README para descrever quais componentes foram utilizados e como sua aplicação deverá ser executada.
+
+__________________
+
+- Docker instalado
+
+Subir a aplicação
+
+```bash
+docker-compose up
+```
+
+Rodando teste
+```bash
+docker-compose up
+docker-compose exec application bash -c "rails db:migrate && rails test"
+```
+__________________
