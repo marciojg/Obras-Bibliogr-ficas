@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 RSpec.describe AuthorsController, type: :controller do
 
   let(:valid_attributes) {

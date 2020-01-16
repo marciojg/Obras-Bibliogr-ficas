@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module LastNameService
   class << self
     def convert(lastname)

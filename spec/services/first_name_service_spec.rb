@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 RSpec.describe FirstNameService do
   describe "#covert" do
     it "deve receber um nome e retorna-lo com primeira letra maíuscula" do
