@@ -2,21 +2,27 @@
 class Api::V1::AuthorsController < ApplicationController
   # GET /authors
   def index
-    @number_of_names = JSON.parse(params[:number_of_names]) if params[:number_of_names].present?
-    @list_of_names = JSON.parse(params[:list_of_names]) if params[:list_of_names].present?
+    @number_names = JSON.parse(params[:number_names]) if params[:number_names].present?
+    @list_names = JSON.parse(params[:list_names]) if params[:list_names].present?
 
-    @authors = []
+    render json: authors_result
+  end
 
-    if @number_of_names.present? && @list_of_names.present? && @number_of_names.to_i == @list_of_names.count
-      @list_of_names.each do |name|
-        @authors << AuthorNameService.change_for_author_name(name)
+  private
+
+  def authors_result
+    authors = []
+
+    if @number_names.present? && @list_names.present? && @number_names.to_i == @list_names.count
+      @list_names.each do |name|
+        authors << AuthorNameService.change_for_author_name(name)
       end
     end
 
-    render json: @authors
+    authors
   end
 
   def author_params
-    params.permit :number_of_names, list_of_names: []
+    params.permit :number_names, list_names: []
   end
 end
