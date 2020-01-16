@@ -24,7 +24,7 @@ module AuthorNameService
     private
 
     def generate_author_name
-      return transform(common_name, Name::SurnameService.itself) unless has_complete_common_name?
+      return transform(common_name, Name::SurnameService.itself) if has_only_piece_of_name?
 
       first_piece_as_downcase = capture_first_piece
       last_piece_as_downcase = capture_last_piece(first_piece_as_downcase)
@@ -64,8 +64,8 @@ module AuthorNameService
       Name::NameManagerService.transform piece_name, type_to_transform
     end
 
-    def has_complete_common_name?
-      common_name_downcased_as_array.count > 1
+    def has_only_piece_of_name?
+      common_name_downcased_as_array.count <= 1
     end
 
     def transform_in_a_author_name(first_piece_as_downcase, last_piece_as_downcase)
