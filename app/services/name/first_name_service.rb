@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
-module FirstNameService
+module Name::FirstNameService
   class << self
-    def convert(name)
+    def transform(name)
       name.to_s.capitalize
     end
   end

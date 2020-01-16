@@ -1,13 +1,6 @@
 FROM ruby:2.6.5
 
-# ENV LANG=pt_BR.UTF-8
-# Set the locale
-RUN apt-get update && \
-    apt-get install -y locales && \
-    locale-gen pt_BR.UTF-8
-ENV LANG pt_BR.UTF-8
-ENV LANGUAGE pt_BR:pt
-ENV LC_ALL pt_BR.UTF-8
+ENV LANG=pt_BR.UTF-8
 
 # Ports.
 EXPOSE 3000

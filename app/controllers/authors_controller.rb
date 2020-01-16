@@ -9,7 +9,7 @@ class AuthorsController < ApplicationController
 
     if @number_of_names.present? && @list_of_names.present? && @number_of_names.to_i == @list_of_names.count
       @list_of_names.each do |name|
-        @authors << AuthorNameService.convert(name)
+        @authors << AuthorNameService.change_for_author_name(name)
       end
     end
 

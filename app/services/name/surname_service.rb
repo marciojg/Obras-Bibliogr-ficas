@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
-module LastNameService
+module Name::SurnameService
   class << self
-    def convert(lastname)
+    def transform(lastname)
       lastname.to_s.upcase
     end
   end
