@@ -65,7 +65,7 @@ module AuthorNameService
     end
 
     def has_only_piece_of_name?
-      common_name_downcased_as_array.count > 1
+      common_name_downcased_as_array.count <= 1
     end
 
     def transform_in_a_author_name(first_piece_as_downcase, last_piece_as_downcase)

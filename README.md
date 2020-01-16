@@ -13,7 +13,7 @@ Esta aplicação foi desenvolvida utilizando a técnica de TDD com baby-steps. O
 
 ### Subir a aplicação
 ```bash
-docker-compose up --build
+docker-compose up --build -d
 ```
 
   #### A) Rodando os testes via RSpec
@@ -23,7 +23,7 @@ docker-compose exec application rspec
 
 #### B) Rodar a aplicação e testar o funcionamento da API com PostMan
 
-    - Para isso é necessário subir o docker compose (docker-compose up) que irá subir a aplicação no endereço http://localhost:3000
+    - Para isso é necessário subir o docker compose (docker-compose up -d) que irá subir a aplicação no endereço http://localhost:3000
     - Abir o software Postman -> Criar uma nova aba -> E prencher os campos:
       - Endereço: http://localhost:3000/api/v1/authors
       - Método: GET
