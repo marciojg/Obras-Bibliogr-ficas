@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-class AuthorsController < ApplicationController
+class Api::V1::AuthorsController < ApplicationController
   # GET /authors
   def index
     @number_of_names = JSON.parse(params[:number_of_names]) if params[:number_of_names].present?

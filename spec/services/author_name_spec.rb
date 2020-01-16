@@ -23,20 +23,20 @@ RSpec.describe AuthorNameService do
       expect { AuthorNameService.change_for_author_name(2) }.to raise_exception(TypeError)
     end
 
-    it 'Retornar um nome de autor com sobrenome em letras mai?sculas, seguido de uma v?rgula e da primeira parte do nome apenas com as iniciais mai?sculas' do
+    it 'Retornar um nome de autor com sobrenome em letras maiúsculas, seguido de uma vírgula e da primeira parte do nome apenas com as iniciais maiúsculas' do
       mock_of_names_and_author_names.each do |mock|
         expect(AuthorNameService.change_for_author_name(mock[0])).to eq(mock[1])
       end
     end
   end
 
-  describe 'Regras de formata??es b?sicas' do
-    it 'o sobrenome ser?o igual a ?ltima parte do nome e deve ser apresentado em letras mai?sculas' do
+  describe 'Regras de formatações básicas' do
+    it 'o sobrenome sério igual a última parte do nome e deve ser apresentado em letras maiúsculas' do
       expect(AuthorNameService.change_for_author_name('Fernando Paulo')).to eq('PAULO, Fernando')
       expect(AuthorNameService.change_for_author_name('Fernando Jo?o da Silva Paulo')).to eq('PAULO, Fernando')
     end
 
-    it 'se houver apenas uma parte no nome, ela deve ser apresentada em letras mai?sculas (sem v?rgula)' do
+    it 'se houver apenas uma parte no nome, ela deve ser apresentada em letras maiúsculas (sem vírgula)' do
       expect(AuthorNameService.change_for_author_name('Guimaraes')).to eq('GUIMARAES')
       expect(AuthorNameService.change_for_author_name(' guimaraes')).to eq(' GUIMARAES')
     end
@@ -46,13 +46,13 @@ RSpec.describe AuthorNameService do
       expect(AuthorNameService.change_for_author_name('Joao Neto')).to eq('NETO, Joao')
     end
 
-    it 'as partes do nome que n?o fazem parte do sobrenome devem ser impressas com a inicial mai?scula e com as demais letras mai?scula;' do
+    it 'as partes do nome que não fazem parte do sobrenome devem ser impressas com a inicial maiúscula e com as demais letras maiúscula;' do
       conterted_name = AuthorNameService.change_for_author_name('Joao Silva Neto')
 
       expect(conterted_name.split(' ').last).to eq('Joao')
     end
 
-    it '"da", "de", "do", "das", "dos" n?o fazem parte do sobrenome e n?o iniciam por letra mai?scula.' do
+    it '"da", "de", "do", "das", "dos" não fazem parte do sobrenome e não iniciam por letra maiúscula.' do
       conterted_name = AuthorNameService.change_for_author_name('Joao da Silva')
       last_element_of_converted_name = conterted_name.split(' ').last
 

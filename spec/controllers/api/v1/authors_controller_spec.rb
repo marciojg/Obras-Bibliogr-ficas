@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-RSpec.describe AuthorsController, type: :controller do
+RSpec.describe Api::V1::AuthorsController, type: :controller do
 
   let(:valid_attributes) {
     {
