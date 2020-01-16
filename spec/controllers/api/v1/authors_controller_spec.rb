@@ -3,15 +3,15 @@ RSpec.describe Api::V1::AuthorsController, type: :controller do
 
   let(:valid_attributes) {
     {
-      number_of_names: "3",
-      list_of_names: '["Joao Gabriel", "Felipe da Silva", "Maria Goncalves"]'
+      number_names: "3",
+      list_names: '["Joao Gabriel", "Felipe da Silva", "Maria Goncalves"]'
     }
   }
 
   let(:invalid_attributes) {
     {
-      number_of_names: "1",
-      list_of_names: '["Joao Gabriel", "Felipe da Silva", "Maria Goncalves"]'
+      number_names: "1",
+      list_names: '["Joao Gabriel", "Felipe da Silva", "Maria Goncalves"]'
     }
   }
 

@@ -14,7 +14,8 @@ RSpec.describe AuthorNameService do
       [' Guimaraes', ' GUIMARAES'],
       ['Marcio de Jesus Goncalves da Silva', 'SILVA, Marcio de'],
       ['Fernando Diego da Marques', 'MARQUES, Fernando'],
-      ['Joao do Neto', 'NETO, Joao do']
+      ['Joao do Neto', 'NETO, Joao do'],
+      ['Joao do Neto silva', 'SILVA, Joao do']
     ]
   }
 
