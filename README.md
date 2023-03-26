@@ -1,5 +1,9 @@
 # Obras Bibliográficas
 
+# Problema proposto
+
+O detalhes do problma proposto pode ser encontrado (aqui)[./TESTE_RUBY.md]
+
 ## O que foi usado
 - Ruby 2.6.5
 - Rails API 6
