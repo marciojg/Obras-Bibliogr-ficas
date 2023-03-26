@@ -1,8 +1,8 @@
 # Obras Bibliográficas
 
-# Problema proposto
+## Problema proposto
 
-O detalhes do problma proposto pode ser encontrado [aqui](./TESTE_RUBY.md)
+Os detalhes do problema proposto pode ser encontrado [aqui](./TESTE_RUBY.md)
 
 ## O que foi usado
 - Ruby 2.6.5
